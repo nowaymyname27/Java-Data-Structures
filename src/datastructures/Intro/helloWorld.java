@@ -1,4 +1,4 @@
-package Test.src.datastructures.Intro;
+package datastructures.Intro;
 
 public class helloWorld {
     public static void main(String[] args) {
