@@ -61,4 +61,19 @@ public class LinkedList {
         }
         length++;
     }
+
+    public void remove() {
+        tail = head;
+        if (head == null) {
+        } else if (head.next == null) {
+            head = null;
+            tail = null;
+        } else {
+            for (int i = 1; i < (length - 1); i++) {
+                tail = tail.next;
+            }
+            tail.next = null;
+        }
+
+    }
 }
