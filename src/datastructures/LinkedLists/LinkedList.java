@@ -62,18 +62,22 @@ public class LinkedList {
         length++;
     }
 
-    public void remove() {
-        tail = head;
-        if (head == null) {
-        } else if (head.next == null) {
+    public Node removeLast() {
+        Node temp = head;
+        Node pre = head;
+        if (head == null)
+            return null;
+        while (temp.next != null) {
+            pre = temp;
+            temp = temp.next;
+        }
+        tail = pre;
+        tail.next = null;
+        length--;
+        if (length == 0) {
             head = null;
             tail = null;
-        } else {
-            for (int i = 1; i < (length - 1); i++) {
-                tail = tail.next;
-            }
-            tail.next = null;
         }
-
+        return temp;
     }
 }
