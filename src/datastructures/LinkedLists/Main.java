@@ -7,10 +7,7 @@ public class Main {
         myLinkedList.append(2);
         myLinkedList.append(3);
 
-        myLinkedList.printList();
+        System.out.println(myLinkedList.get(0).value);
 
-        myLinkedList.removeLast();
-
-        myLinkedList.printList();
     }
 }
