@@ -9,7 +9,7 @@ public class Main {
 
         myLinkedList.printList();
 
-        myLinkedList.set(0, 3);
+        myLinkedList.insert(0, 3);
 
         myLinkedList.printList();
 
