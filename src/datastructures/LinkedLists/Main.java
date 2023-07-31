@@ -7,7 +7,11 @@ public class Main {
         myLinkedList.append(2);
         myLinkedList.append(3);
 
-        System.out.println(myLinkedList.get(0).value);
+        myLinkedList.printList();
+
+        myLinkedList.set(0, 3);
+
+        myLinkedList.printList();
 
     }
 }
