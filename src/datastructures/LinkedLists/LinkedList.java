@@ -193,4 +193,17 @@ public class LinkedList {
         }
         return turtle;
     }
+
+    public boolean hasLoop() {
+        Node turtle = head;
+        Node hare = head;
+        while (hare != null && hare.next != null) {
+            turtle = turtle.next;
+            hare = hare.next.next;
+            if (hare == turtle) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
