@@ -206,4 +206,25 @@ public class LinkedList {
         }
         return false;
     }
+
+    public Node findKthFromEnd(int k) {
+        if (k <= 0 || head == null) {
+            return null;
+        }
+        int length = 1;
+        Node temp = head;
+        while (temp != tail) {
+            temp = temp.next;
+            length++;
+        }
+        if (k > length) {
+            return null;
+        }
+        temp = head;
+        int loop = length - k;
+        for (int i = 0; i < loop; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
 }

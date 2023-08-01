@@ -2,15 +2,12 @@ package datastructures.LinkedLists;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(1);
+        LinkedList myList = new LinkedList(1);
+        myList.append(2);
+        myList.append(3);
+        myList.append(4);
+        myList.append(5);
 
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        // myLinkedList.prepend(0);
-
-        myLinkedList.printList();
-
-        System.out.println(myLinkedList.findMiddleNode().value);
-
+        System.out.println(myList.findKthFromEnd(0).value);
     }
 }
