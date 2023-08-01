@@ -6,12 +6,11 @@ public class Main {
 
         myLinkedList.append(2);
         myLinkedList.append(3);
+        // myLinkedList.prepend(0);
 
         myLinkedList.printList();
 
-        myLinkedList.reverse();
-
-        myLinkedList.printList();
+        System.out.println(myLinkedList.findMiddleNode().value);
 
     }
 }

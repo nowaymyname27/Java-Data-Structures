@@ -180,4 +180,17 @@ public class LinkedList {
             temp = after;
         }
     }
+
+    public Node findMiddleNode() {
+        Node turtle = head;
+        Node hare = head;
+        while (hare != tail) {
+            hare = hare.next;
+            turtle = turtle.next;
+            if (hare.next != null) {
+                hare = hare.next;
+            }
+        }
+        return turtle;
+    }
 }
