@@ -8,7 +8,7 @@ public class Main {
         myList.append(3);
         myList.append(4);
 
-        myList.reverseBetween(1, 4);
+        myList.reverseBetween(0, 4);
         // System.out.println(myList.hasLoop());
         myList.printList();
     }
