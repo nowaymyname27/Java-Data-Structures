@@ -50,4 +50,35 @@ public class DoublyLinkedList {
     public void getLength() {
         System.out.println("Length: " + length);
     }
+
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+        length++;
+
+    }
+
+    public Node removeLast() {
+        if (length == 0) {
+            return null;
+        }
+        Node temp = tail;
+        if (length == 1) {
+            tail = null;
+            head = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+            temp.prev = null;
+        }
+        length--;
+        return temp;
+    }
 }
