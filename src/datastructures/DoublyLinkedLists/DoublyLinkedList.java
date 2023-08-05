@@ -165,4 +165,29 @@ public class DoublyLinkedList {
         return true;
 
     }
+
+    public Node remove(int index) {
+        if (index < 0 || index > length) {
+            return null;
+        }
+        if (index == 0) {
+            removeFirst();
+        }
+        if (index == length - 1) {
+            removeLast();
+        }
+        Node before = get(index - 1);
+        Node temp = before.next;
+        Node after = temp.next;
+
+        before.next = after;
+        after.prev = before;
+
+        temp.prev = null;
+        temp.next = null;
+
+        length--;
+
+        return temp;
+    }
 }
