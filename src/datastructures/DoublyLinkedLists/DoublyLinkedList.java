@@ -190,4 +190,32 @@ public class DoublyLinkedList {
 
         return temp;
     }
+
+    public void swapFirstLast() {
+        if (length < 2) {
+            return;
+        }
+        Node first = head;
+        Node last = tail;
+
+        if (length == 2) {
+            first.prev = last;
+            last.next = first;
+            first.next = null;
+            last.prev = null;
+        } else {
+            first = first.next;
+            first.prev = last;
+            first = head;
+            last = last.prev;
+            last.next = first;
+            last = tail;
+            first.prev = last.prev;
+            last.prev = null;
+            last.next = first.next;
+            first.next = null;
+        }
+        head = last;
+        tail = first;
+    }
 }
