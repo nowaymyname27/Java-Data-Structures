@@ -201,4 +201,25 @@ public class DoublyLinkedList {
         head.value = tail.value;
         tail.value = temp;
     }
+
+    public void reverse() {
+        if (length < 2) {
+            return;
+        }
+        Node current = head;
+        Node temp = current.next;
+        for (int i = 0; i < length; i++) {
+            temp = current.next;
+            current.next = current.prev;
+            current.prev = temp;
+            current = temp;
+        }
+        temp = head;
+        head = tail;
+        tail = temp;
+    }
+
+    public boolean palindromeChecker() {
+
+    }
 }
