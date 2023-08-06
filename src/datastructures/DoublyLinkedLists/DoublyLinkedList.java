@@ -192,30 +192,13 @@ public class DoublyLinkedList {
     }
 
     public void swapFirstLast() {
-        if (length < 2) {
+        // If there are less than two nodes in the list, there's nothing to swap
+        if (length < 2)
             return;
-        }
-        Node first = head;
-        Node last = tail;
 
-        if (length == 2) {
-            first.prev = last;
-            last.next = first;
-            first.next = null;
-            last.prev = null;
-        } else {
-            first = first.next;
-            first.prev = last;
-            first = head;
-            last = last.prev;
-            last.next = first;
-            last = tail;
-            first.prev = last.prev;
-            last.prev = null;
-            last.next = first.next;
-            first.next = null;
-        }
-        head = last;
-        tail = first;
+        // Swap the values of the head and tail nodes
+        int temp = head.value;
+        head.value = tail.value;
+        tail.value = temp;
     }
 }
