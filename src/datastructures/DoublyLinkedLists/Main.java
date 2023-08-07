@@ -3,13 +3,17 @@ package datastructures.DoublyLinkedLists;
 public class Main {
 
     public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(0);
-        myDLL.append(1);
-        myDLL.append(2);
-        myDLL.append(3);
+        DoublyLinkedList myDll = new DoublyLinkedList(1);
+        myDll.append(2);
+        myDll.append(3);
+        myDll.append(4);
 
-        myDLL.printList();
+        System.out.println("myDll before swapPairs:");
+        myDll.printList();
 
-        System.out.println(myDLL.get(3).value);
+        myDll.swapPairs();
+
+        System.out.println("\nmyDll after swapPairs:");
+        myDll.printList();
     }
 }
