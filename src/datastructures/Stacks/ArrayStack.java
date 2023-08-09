@@ -32,9 +32,16 @@ public class ArrayStack<T> {
         return stackList.size();
     }
 
-    public void push(T item) {
-        stackList.add(item);
+    public void push(T value) {
+        stackList.add(value);
+    }
 
+    public T pop() {
+        if (stackList.size() == 0) {
+            return null;
+        } else {
+            return stackList.remove(stackList.size() - 1);
+        }
     }
 
 }
