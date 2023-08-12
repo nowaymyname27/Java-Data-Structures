@@ -13,9 +13,4 @@ public class BinarySearchTree {
             this.value = value;
         }
     }
-
-    public BinarySearchTree(int value) {
-        Node newNode = new Node(value);
-        root = newNode;
-    }
 }
