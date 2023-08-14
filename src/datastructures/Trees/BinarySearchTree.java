@@ -1,7 +1,5 @@
 package datastructures.Trees;
 
-import javax.swing.plaf.TreeUI;
-
 public class BinarySearchTree {
 
     Node root;
