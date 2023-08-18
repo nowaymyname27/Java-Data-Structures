@@ -12,7 +12,7 @@ public class Main {
 
         myGraph.printGraph();
 
-        myGraph.removeEdge("A", "B");
+        myGraph.removeVertex("A");
 
         myGraph.printGraph();
     }

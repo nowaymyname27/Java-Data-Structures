@@ -35,4 +35,15 @@ public class Graph {
         }
         return false;
     }
+
+    public boolean removeVertex(String vertex) {
+        if (adjList == null) {
+            return false;
+        }
+        for (String otherVertex : adjList.get(vertex)) {
+            adjList.get(otherVertex).remove(vertex);
+        }
+        adjList.remove(vertex);
+        return true;
+    }
 }
