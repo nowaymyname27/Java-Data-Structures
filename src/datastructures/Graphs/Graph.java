@@ -26,4 +26,13 @@ public class Graph {
         }
         return false;
     }
+
+    public boolean removeEdge(String vertex1, String vertex2) {
+        if (adjList.containsKey(vertex1) && adjList.containsKey(vertex2)) {
+            adjList.get(vertex1).remove(vertex2);
+            adjList.get(vertex2).remove(vertex1);
+            return true;
+        }
+        return false;
+    }
 }
