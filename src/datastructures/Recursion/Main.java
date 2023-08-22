@@ -8,7 +8,7 @@ public class Main {
         myBST.insert(21);
         myBST.insert(76);
         myBST.insert(18);
-        myBST.insert(27);
+        myBST.rInsert(27);
         myBST.insert(52);
         myBST.insert(82);
 
