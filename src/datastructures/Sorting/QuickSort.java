@@ -21,4 +21,25 @@ public class QuickSort {
         swap(array, pivotIndex, swapIndex);
         return swapIndex;
     }
+
+    public static int[] quickSortHelper(int[] array, int left, int right) {
+        if (left < right) {
+            int pivotIndex = pivot(array, left, right);
+            quickSortHelper(array, left, pivotIndex - 1);
+            quickSortHelper(array, pivotIndex + 1, right);
+        }
+        return array;
+    }
+
+    public static void quickSort(int[] array) {
+        quickSortHelper(array, 0, array.length - 1);
+    }
+
+    public static void main(String[] args) {
+        int[] array = { 4, 6, 1, 7, 3, 2, 5 };
+
+        quickSort(array);
+
+        System.out.println(Arrays.toString(array));
+    }
 }
