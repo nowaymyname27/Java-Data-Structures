@@ -1,5 +1,9 @@
 package datastructures.Trees;
 
+import java.util.ArrayList;
+import java.util.Queue;
+import java.util.LinkedList;
+
 public class BinarySearchTree {
 
     Node root;
@@ -53,5 +57,34 @@ public class BinarySearchTree {
             }
         }
         return false;
+    }
+
+    public ArrayList<Integer> BFS() {
+        Node currentNode = root;
+        Queue<Node> queue = new LinkedList<>();
+        ArrayList<Integer> results = new ArrayList<>();
+        queue.add(currentNode);
+
+        while (queue.size() > 0) {
+            currentNode = queue.remove();
+            results.add(currentNode.value);
+            if (currentNode.left != null) {
+                queue.add(currentNode.left);
+            }
+            if (currentNode.right != null) {
+                queue.add(currentNode.right);
+            }
+        }
+        return results;
+    }
+
+    public ArrayList<Integer> DFSPreOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+        
+        class Traverse{
+            Traverse(Node currentNode){
+                results.add
+            }
+        }
     }
 }

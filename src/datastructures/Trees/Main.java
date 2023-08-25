@@ -12,7 +12,6 @@ public class Main {
         myBST.insert(52);
         myBST.insert(82);
 
-        System.out.println(myBST.contains(27));
-        System.out.println(myBST.contains(17));
+        System.out.println(myBST.BFS());
     }
 }
