@@ -10,8 +10,9 @@ public class Main {
         myList.append(2);
         myList.append(5);
 
-        myList.removeDuplicates();
-        // System.out.println(myList.hasLoop());
+        myList.printList();
+        myList.removeFirst();
+        myList.removeLast();
         myList.printList();
     }
 }
