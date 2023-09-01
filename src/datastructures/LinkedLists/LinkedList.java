@@ -3,16 +3,35 @@ package datastructures.LinkedLists;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Represents a singly linked list data structure.
+ */
 public class LinkedList {
 
+    // Reference to the first node in the list.
     private Node head;
+
+    // Reference to the last node in the list.
     private Node tail;
+
+    // Total number of nodes in the list.
     private int length;
 
+    /**
+     * Represents a node in the LinkedList.
+     */
     class Node {
+        // Value stored in the node.
         int value;
+
+        // Reference to the next node.
         Node next;
 
+        /**
+         * Constructor to initialize the node with a value.
+         *
+         * @param value The value to be stored in the node.
+         */
         Node(int value) {
             this.value = value;
         }
