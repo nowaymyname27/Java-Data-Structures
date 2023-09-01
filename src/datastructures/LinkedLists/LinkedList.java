@@ -71,18 +71,30 @@ public class LinkedList {
         }
     }
 
+    /**
+     * Prints the value of the head node to the console. 
+     * If the list is empty, it prints "Head: null".
+     */
     public void getHead() {
+        // Check if the list is empty
         if (head == null) {
             System.out.println("Head: null");
         } else {
+            // Print the value of the head node
             System.out.println("Head: " + head.value);
         }
     }
 
+    /**
+     * Prints the value of the tail node to the console. 
+     * If the list is empty, it prints "Tail: null".
+     */
     public void getTail() {
+        // Check if the list is empty
         if (head == null) {
             System.out.println("Tail: null");
         } else {
+            // Print the value of the tail node
             System.out.println("Tail: " + tail.value);
         }
     }
