@@ -37,17 +37,36 @@ public class LinkedList {
         }
     }
 
+    /**
+     * Constructs a new LinkedList with a single node containing the provided value.
+     *
+     * @param value The value for the initial node of the LinkedList.
+     */
     public LinkedList(int value) {
+        // Create a new node with the provided value
         Node newNode = new Node(value);
+
+        // Set the head and tail to point to the new node
         head = newNode;
         tail = newNode;
+
+        // Set the initial length of the list to 1
         length = 1;
     }
 
+    /**
+     * Prints the values of all the nodes in the LinkedList to the console.
+     */
     public void printList() {
+        // Start from the head of the list
         Node temp = head;
+
+        // Traverse the list
         while (temp != null) {
+            // Print the current node's value
             System.out.println(temp.value);
+
+            // Move to the next node
             temp = temp.next;
         }
     }
