@@ -72,7 +72,7 @@ public class LinkedList {
     }
 
     /**
-     * Prints the value of the head node to the console. 
+     * Prints the value of the head node to the console.
      * If the list is empty, it prints "Head: null".
      */
     public void getHead() {
@@ -86,7 +86,7 @@ public class LinkedList {
     }
 
     /**
-     * Prints the value of the tail node to the console. 
+     * Prints the value of the tail node to the console.
      * If the list is empty, it prints "Tail: null".
      */
     public void getTail() {
@@ -99,38 +99,77 @@ public class LinkedList {
         }
     }
 
+    /**
+     * Prints the current length of the LinkedList to the console.
+     */
     public void getLength() {
         System.out.println("Length: " + length);
     }
 
+    /**
+     * Appends a new node with the given value to the end of the LinkedList.
+     *
+     * @param value The value for the new node to be appended.
+     */
     public void append(int value) {
+        // Create a new node with the given value
         Node newNode = new Node(value);
+
+        // Check if the list is empty
         if (length == 0) {
+            // If the list is empty, set the head and tail to point to the new node
             head = newNode;
             tail = newNode;
         } else {
+            // Otherwise, link the new node after the current tail and update the tail
             tail.next = newNode;
             tail = newNode;
         }
+
+        // Increment the length of the list
         length++;
     }
 
+    /**
+     * Removes the last node from the LinkedList and returns it.
+     * If the list is empty, it returns null.
+     *
+     * @return The last node that was removed, or null if the list was empty.
+     */
     public Node removeLast() {
+        // Start with the head of the list
         Node temp = head;
+
+        // Create a pointer for the previous node, also start from head
         Node pre = head;
-        if (head == null)
+
+        // If the list is empty, return null
+        if (head == null) {
             return null;
+        }
+
+        // Traverse until the end of the list while maintaining a pointer to the
+        // previous node
         while (temp.next != null) {
             pre = temp;
             temp = temp.next;
         }
+
+        // Update the tail to be the previous node
         tail = pre;
+        // Disconnect the last node
         tail.next = null;
+
+        // Decrement the length of the list
         length--;
+
+        // If the list becomes empty after the removal, set both head and tail to null
         if (length == 0) {
             head = null;
             tail = null;
         }
+
+        // Return the node that was removed
         return temp;
     }
 
